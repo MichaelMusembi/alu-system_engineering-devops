@@ -34,14 +34,14 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend veldora-tech-frontend
+frontend musembi-tech-frontend
     bind *:80
-    default_backend veldora-tech-backend
+    default_backend musembi-tech-backend
 
-backend veldora-tech-backend
+backend musembi-tech-backend
     balance roundrobin
-    server 531495-web-01 35.175.135.26:80 check
-    server 531495-web-02 54.160.109.249:80 check
+    server 6140-web-01 54.227.39.163:80 check
+    server 6140-web-02 54.226.99.153:80 check
 "
 
 # shellcheck disable=SC2154
@@ -59,3 +59,6 @@ else
 fi
 
 echo -e "web-01 web-02"
+echo "web-01"
+echo "web-02"
+
