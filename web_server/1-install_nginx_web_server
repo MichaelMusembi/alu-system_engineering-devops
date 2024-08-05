@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
-# This Bash script installs Nginx on Ubuntu, configures it to listen on port 80, and serves a page containing "Holberton School for the win!"
-
-# Update and upgrade the package list
-sudo apt-get update -y
-sudo apt-get upgrade -y
-
-# Install Nginx
-sudo apt-get install nginx -y
-
-# Create a custom HTML page containing "Holberton School for the win!"
-echo "Holberton School for the win!" | sudo tee /var/www/html/index.html
-
-# Start Nginx service
+# installs the reverse proxy - Nginx
+sudo apt update && upgrade
+sudo apt install nginx -y 
+echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo service nginx start
-
